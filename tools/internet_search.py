@@ -143,7 +143,7 @@ def _fetch_page_text(url: str) -> str:
     resp = requests.get(
         url,
         timeout=(10, 15),  # (connect timeout, read timeout per chunk)
-        headers={"User-Agent": "Mozilla/5.0 (compatible; ClarioAI/1.0)"},
+        headers={"User-Agent": "Mozilla/5.0 (compatible; AnalisisIn/1.0)"},
         stream=True,  # ambil header dulu sebelum download body
     )
     logging.debug(f"[_fetch_page_text] HTTP GET took {time.time() - t:.2f}s, status={resp.status_code}, url={url}")

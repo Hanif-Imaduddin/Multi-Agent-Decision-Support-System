@@ -1,14 +1,14 @@
-# Clario.AI — Sistem Pendukung Keputusan Berbasis Agentic AI untuk Perencanaan Bisnis Kewirausahaan
+# AnalisisIn — Sistem Pendukung Keputusan Berbasis Agentic AI untuk Perencanaan Bisnis Kewirausahaan
 
 ## Latar Belakang dan Tujuan
 
 Kegagalan usaha baru merupakan fenomena yang marak terjadi di berbagai belahan dunia. Data dari U.S. Bureau of Labor Statistics mencatat bahwa 20,4% bisnis baru gagal pada tahun pertama dan 49,4% gagal di tahun kelima. Faktor utama penyebab kegagalan tersebut mencakup kehabisan modal, ketidaksesuaian produk dengan pasar, serta perencanaan bisnis yang tidak dilandasi analisis data yang memadai. Di sisi lain, Indonesia mencatat pertumbuhan wirausaha yang signifikan dengan 53,38 juta wirausaha aktif pada tahun 2025, namun pertumbuhan kuantitatif tersebut belum sepenuhnya mencerminkan tingkat keberlanjutan dan kualitas perencanaan yang memadai.
 
-ClarioAI hadir sebagai solusi berupa _Decision Support System_ berbasis _Agentic AI_ yang dirancang khusus untuk mendukung proses perencanaan bisnis kewirausahaan secara menyeluruh. Sistem ini mengintegrasikan _Large Language Model_ (LLM) dengan arsitektur multi-agent yang mampu melakukan penalaran mandiri, riset pasar secara _real-time_, pemodelan finansial, analisis strategis, hingga pengawasan etika dan kepatuhan hukum. Dengan pendekatan ini, wirausahawan dapat memperoleh rencana bisnis yang komprehensif dan berbasis data dalam waktu yang jauh lebih singkat dibandingkan pendekatan konvensional.
+AnalisisIn hadir sebagai solusi berupa _Decision Support System_ berbasis _Agentic AI_ yang dirancang khusus untuk mendukung proses perencanaan bisnis kewirausahaan secara menyeluruh. Sistem ini mengintegrasikan _Large Language Model_ (LLM) dengan arsitektur multi-agent yang mampu melakukan penalaran mandiri, riset pasar secara _real-time_, pemodelan finansial, analisis strategis, hingga pengawasan etika dan kepatuhan hukum. Dengan pendekatan ini, wirausahawan dapat memperoleh rencana bisnis yang komprehensif dan berbasis data dalam waktu yang jauh lebih singkat dibandingkan pendekatan konvensional.
 
 Sistem ini dibangun di atas paradigma _Tree of Thoughts_ (ToT) yang memungkinkan eksplorasi berbagai jalur perencanaan bisnis sebelum memilih solusi yang paling optimal. Setiap agen beroperasi secara otonom namun terkoordinasi melalui orkestrasi terpusat, menghasilkan laporan terstruktur yang mencakup analisis pasar, Lean Canvas, proyeksi keuangan berbasis simulasi Monte-Carlo, serta validasi etika dan regulasi. Sistem juga mendukung mekanisme _human-in-the-loop_ di mana pengguna dapat memberikan umpan balik untuk memandu iterasi analisis berikutnya.
 
-ClarioAI dikembangkan oleh Kelompok 11 sebagai bagian dari proyek mata kuliah Capstone Project dengan rentang pengembangan Maret hingga Mei 2026. Sistem ini berpotensi menjadi katalisator penting dalam ekosistem kewirausahaan Indonesia, menjembatani kesenjangan antara ketersediaan data pasar yang melimpah dengan kapasitas analitis wirausahawan yang terbatas.
+AnalisisIn dikembangkan oleh Kelompok 11 sebagai bagian dari proyek mata kuliah Capstone Project dengan rentang pengembangan Maret hingga Mei 2026. Sistem ini berpotensi menjadi katalisator penting dalam ekosistem kewirausahaan Indonesia, menjembatani kesenjangan antara ketersediaan data pasar yang melimpah dengan kapasitas analitis wirausahawan yang terbatas.
 
 ---
 
@@ -16,11 +16,11 @@ ClarioAI dikembangkan oleh Kelompok 11 sebagai bagian dari proyek mata kuliah Ca
 
 ### Pola Multi-Agent dengan Supervisor
 
-ClarioAI menggunakan pola _supervisor multi-agent_ yang diorkestrasikan menggunakan kerangka kerja **LangGraph**. Seluruh alur kerja dikontrol oleh satu agen pusat (_Lead Orchestrator_) yang mendistribusikan tugas ke empat agen spesialis secara berurutan, kemudian mengevaluasi hasil dari seluruh agen untuk menentukan apakah rencana bisnis layak diterima atau perlu direvisi.
+AnalisisIn menggunakan pola _supervisor multi-agent_ yang diorkestrasikan menggunakan kerangka kerja **LangGraph**. Seluruh alur kerja dikontrol oleh satu agen pusat (_Lead Orchestrator_) yang mendistribusikan tugas ke empat agen spesialis secara berurutan, kemudian mengevaluasi hasil dari seluruh agen untuk menentukan apakah rencana bisnis layak diterima atau perlu direvisi.
 
 ### Alur Graph
 
-![Alur Graph ClarioAI](Graph%20Flow.svg)
+![Alur Graph AnalisisIn](Graph%20Flow.svg)
 
 Orkestrasi bersifat iteratif; jika `approval_status` masih `rejected` dan jumlah iterasi belum mencapai `max_iterations`, pipeline akan kembali dijalankan dari Market Scout hingga seluruh laporan direvisi dan dievaluasi ulang.
 
@@ -75,7 +75,7 @@ State disimpan secara persisten di MongoDB sehingga sesi dapat dilanjutkan kapan
 ### Struktur Direktori
 
 ```
-ClarioAI/
+AnalisisIn/
 ├── states/
 │   └── schema.py           # EBPState dan seluruh dataclass laporan
 ├── tools/

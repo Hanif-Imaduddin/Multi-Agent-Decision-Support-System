@@ -1,5 +1,5 @@
 """
-Concurrency & Deployment Readiness Tests untuk ClarioAI.
+Concurrency & Deployment Readiness Tests untuk AnalisisIn.
 
 Jalankan dengan:
     pytest tests/test_concurrency.py -v

@@ -1,4 +1,4 @@
-"""FastAPI backend for ClarioAI UI."""
+"""FastAPI backend for AnalisisIn UI."""
 from __future__ import annotations
 
 import json
@@ -52,7 +52,7 @@ async def lifespan(app: FastAPI):
     yield
 
 
-app = FastAPI(title="ClarioAI", lifespan=lifespan)
+app = FastAPI(title="AnalisisIn", lifespan=lifespan)
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 # ── Include routers ────────────────────────────────────────────────────────────

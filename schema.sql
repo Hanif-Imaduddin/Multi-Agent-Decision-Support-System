@@ -1,4 +1,4 @@
--- ClarioAI PostgreSQL Schema
+-- AnalisisIn PostgreSQL Schema
 -- Jalankan file ini untuk membuat database: psql -U postgres -d clario_ai -f schema.sql
 
 -- Tabel users
